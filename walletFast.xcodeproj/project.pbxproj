@@ -11,6 +11,11 @@
 		BEDF368F293BB96200C25A47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF368E293BB96200C25A47 /* ContentView.swift */; };
 		BEDF3691293BB96300C25A47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDF3690293BB96300C25A47 /* Assets.xcassets */; };
 		BEDF3694293BB96300C25A47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDF3693293BB96300C25A47 /* Preview Assets.xcassets */; };
+		BEDF369B293BBE9C00C25A47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEDF369A293BBE9C00C25A47 /* GoogleService-Info.plist */; };
+		BEDF369E293BBF9700C25A47 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BEDF369D293BBF9700C25A47 /* FirebaseAnalytics */; };
+		BEDF36A0293BC1CB00C25A47 /* AddExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF369F293BC1CB00C25A47 /* AddExpense.swift */; };
+		BEE660EA293F54D800AFEA4C /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE660E9293F54D800AFEA4C /* ExpenseView.swift */; };
+		BEE660ED293F5F6700AFEA4C /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE660EC293F5F6700AFEA4C /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,10 @@
 		BEDF368E293BB96200C25A47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BEDF3690293BB96300C25A47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEDF3693293BB96300C25A47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BEDF369A293BBE9C00C25A47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BEDF369F293BC1CB00C25A47 /* AddExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpense.swift; sourceTree = "<group>"; };
+		BEE660E9293F54D800AFEA4C /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
+		BEE660EC293F5F6700AFEA4C /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDF369E293BBF9700C25A47 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +61,13 @@
 		BEDF368B293BB96200C25A47 /* walletFast */ = {
 			isa = PBXGroup;
 			children = (
+				BEE660E8293F54CA00AFEA4C /* components */,
 				BEDF368C293BB96200C25A47 /* walletFastApp.swift */,
 				BEDF368E293BB96200C25A47 /* ContentView.swift */,
 				BEDF3690293BB96300C25A47 /* Assets.xcassets */,
+				BEDF369A293BBE9C00C25A47 /* GoogleService-Info.plist */,
 				BEDF3692293BB96300C25A47 /* Preview Content */,
+				BEDF369F293BC1CB00C25A47 /* AddExpense.swift */,
 			);
 			path = walletFast;
 			sourceTree = "<group>";
@@ -65,6 +78,23 @@
 				BEDF3693293BB96300C25A47 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BEE660E8293F54CA00AFEA4C /* components */ = {
+			isa = PBXGroup;
+			children = (
+				BEE660EB293F5F5100AFEA4C /* MainTab */,
+				BEE660E9293F54D800AFEA4C /* ExpenseView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		BEE660EB293F5F5100AFEA4C /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				BEE660EC293F5F6700AFEA4C /* MainTabView.swift */,
+			);
+			path = MainTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +113,9 @@
 			dependencies = (
 			);
 			name = walletFast;
+			packageProductDependencies = (
+				BEDF369D293BBF9700C25A47 /* FirebaseAnalytics */,
+			);
 			productName = walletFast;
 			productReference = BEDF3689293BB96200C25A47 /* walletFast.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +144,9 @@
 				Base,
 			);
 			mainGroup = BEDF3680293BB96100C25A47;
+			packageReferences = (
+				BEDF369C293BBF9700C25A47 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = BEDF368A293BB96200C25A47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +163,7 @@
 			files = (
 				BEDF3694293BB96300C25A47 /* Preview Assets.xcassets in Resources */,
 				BEDF3691293BB96300C25A47 /* Assets.xcassets in Resources */,
+				BEDF369B293BBE9C00C25A47 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDF36A0293BC1CB00C25A47 /* AddExpense.swift in Sources */,
 				BEDF368F293BB96200C25A47 /* ContentView.swift in Sources */,
 				BEDF368D293BB96200C25A47 /* walletFastApp.swift in Sources */,
+				BEE660EA293F54D800AFEA4C /* ExpenseView.swift in Sources */,
+				BEE660ED293F5F6700AFEA4C /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BEDF369C293BBF9700C25A47 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BEDF369D293BBF9700C25A47 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BEDF369C293BBF9700C25A47 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BEDF3681293BB96100C25A47 /* Project object */;
 }
